@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+vendor/
+.venv/
+venv/
+env/
+
+# Build
+dist/
+build/
+target/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Testing
+coverage/
+htmlcov/
+.pytest_cache/
+
+# Claude Code
+.claude/settings.local.json

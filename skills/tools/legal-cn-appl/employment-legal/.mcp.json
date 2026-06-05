@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "yuandian": {
+      "type": "http",
+      "url": "https://mcp.yuandian.com/mcp",
+      "title": "元典法律AI",
+      "description": "案例语义检索、法规检索、企业信息查询——中国法律智能检索平台。"
+    },
+    "filesystem": {
+      "type": "local",
+      "title": "本地文件系统",
+      "description": "读取本地劳动规章制度、劳动合同模板、解除协议、假期登记册等文件。"
+    }
+  },
+  "recommendedCategories": [
+    "hris",
+    "documents",
+    "legal-research",
+    "case-law"
+  ]
+}

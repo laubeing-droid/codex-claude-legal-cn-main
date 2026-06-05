@@ -1,0 +1,1298 @@
+{
+ "meta": {
+ "project": "legal-cn-main",
+ "format_version": "1.0",
+ "description": "中国法律语义树 — 10部核心法律 + 2部新增(消保条例+合同监管办法)。法条 → 构成要件 → 法律效果。",
+ "last_updated": "2026-05-25",
+ "total_laws": 11,
+ "field_map": {
+ "elements": "constituent elements",
+ "legal_effect": "legal consequence",
+ "exceptions": "exceptions",
+ "type": "norm type: validity/mandatory/permissive/prohibitive/definitional",
+ "keywords": "search keywords",
+ "related": "related articles"
+ },
+ "linked_to": "law-versions.json — 法律更新时自动标记受影响的法条"
+ },
+ "laws": {
+ "民法典·合同编": {
+ "source": "commercial-legal/references/contract-law-core.md",
+ "description": "Contract formation, validity, performance, modification, assignment, termination, breach remedies",
+ "articles": [
+ {
+ "article": "第472条",
+ "title": "要约定义",
+ "elements": [
+ "内容具体确定",
+ "表明经受要约人承诺即受约束"
+ ],
+ "legal_effect": "构成要约，对方可承诺成立合同",
+ "type": "定义性",
+ "keywords": [
+ "要约",
+ "合同成立"
+ ]
+ },
+ {
+ "article": "第143条",
+ "title": "民事法律行为有效要件",
+ "elements": [
+ "具有相应民事行为能力",
+ "意思表示真实",
+ "不违反强制性规定",
+ "不违背公序良俗"
+ ],
+ "legal_effect": "民事法律行为有效",
+ "type": "效力性",
+ "keywords": [
+ "合同有效",
+ "生效要件"
+ ]
+ },
+ {
+ "article": "第153条第1款",
+ "title": "违反强制性规定的效力",
+ "elements": [
+ "违反法律/行政法规的强制性规定"
+ ],
+ "legal_effect": "民事法律行为无效",
+ "exceptions": [
+ "该强制性规定不导致该民事法律行为无效的除外"
+ ],
+ "type": "效力性",
+ "keywords": [
+ "合同无效",
+ "强制性规定"
+ ],
+ "related": [
+ "第153条第2款"
+ ]
+ },
+ {
+ "article": "第153条第2款",
+ "title": "违背公序良俗的效力",
+ "elements": [
+ "违背公序良俗"
+ ],
+ "legal_effect": "民事法律行为无效",
+ "type": "效力性",
+ "keywords": [
+ "合同无效",
+ "公序良俗"
+ ]
+ },
+ {
+ "article": "第154条",
+ "title": "恶意串通",
+ "elements": [
+ "行为人与相对人恶意串通",
+ "损害他人合法权益"
+ ],
+ "legal_effect": "民事法律行为无效",
+ "type": "效力性",
+ "keywords": [
+ "合同无效",
+ "恶意串通"
+ ]
+ },
+ {
+ "article": "第147条",
+ "title": "重大误解可撤销",
+ "elements": [
+ "基于重大误解实施民事法律行为"
+ ],
+ "legal_effect": "行为人有权请求撤销",
+ "exceptions": [
+ "除斥期间: 知道之日起90日",
+ "最长5年"
+ ],
+ "type": "效力性",
+ "keywords": [
+ "可撤销",
+ "重大误解"
+ ]
+ },
+ {
+ "article": "第148条",
+ "title": "欺诈可撤销",
+ "elements": [
+ "一方以欺诈手段",
+ "使对方违背真实意思"
+ ],
+ "legal_effect": "受欺诈方有权请求撤销",
+ "exceptions": [
+ "除斥期间: 知道之日起1年"
+ ],
+ "type": "效力性",
+ "keywords": [
+ "可撤销",
+ "欺诈"
+ ]
+ },
+ {
+ "article": "第150条",
+ "title": "胁迫可撤销",
+ "elements": [
+ "一方或第三人胁迫",
+ "使对方违背真实意思"
+ ],
+ "legal_effect": "受胁迫方有权请求撤销",
+ "exceptions": [
+ "除斥期间: 胁迫终止之日起1年"
+ ],
+ "type": "效力性",
+ "keywords": [
+ "可撤销",
+ "胁迫"
+ ]
+ },
+ {
+ "article": "第151条",
+ "title": "显失公平可撤销",
+ "elements": [
+ "一方利用危困状态或缺乏判断力",
+ "成立时显失公平"
+ ],
+ "legal_effect": "受损害方有权请求撤销",
+ "exceptions": [
+ "除斥期间: 知道之日起1年"
+ ],
+ "type": "效力性",
+ "keywords": [
+ "可撤销",
+ "显失公平"
+ ]
+ },
+ {
+ "article": "第577条",
+ "title": "违约责任",
+ "elements": [
+ "不履行合同义务",
+ "或履行不符合约定"
+ ],
+ "legal_effect": "承担继续履行/补救措施/赔偿损失等违约责任",
+ "type": "效力性",
+ "keywords": [
+ "违约责任"
+ ]
+ },
+ {
+ "article": "第563条",
+ "title": "合同法定解除",
+ "elements": [
+ "不可抗力致目的不达",
+ "预期违约",
+ "迟延履行经催告仍不履行",
+ "根本违约"
+ ],
+ "legal_effect": "当事人可以解除合同",
+ "type": "授权性",
+ "keywords": [
+ "合同解除",
+ "法定解除"
+ ]
+ },
+ {
+ "article": "第585条",
+ "title": "违约金调整",
+ "elements": [
+ "违约金低于损失",
+ "或过分高于损失"
+ ],
+ "legal_effect": "可请求法院/仲裁机构增减",
+ "exceptions": [
+ "不超过损失30%"
+ ],
+ "type": "效力性",
+ "keywords": [
+ "违约金"
+ ]
+ },
+ {
+ "article": "第533条",
+ "title": "情势变更",
+ "elements": [
+ "基础条件发生无法预见的重大变化",
+ "非商业风险",
+ "继续履行明显不公平"
+ ],
+ "legal_effect": "可重新协商; 协商不成请求法院/仲裁变更或解除",
+ "type": "效力性",
+ "keywords": [
+ "情势变更"
+ ]
+ }
+ ],
+ "version_ref": {
+ "law": "中华人民共和国民法典",
+ "effective_date": "2021-01-01",
+ "current_version": "2020年5月28日第十三届全国人大三次会议通过",
+ "status": "现行有效",
+ "next_check": "2026-06-01",
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ }
+ },
+ "民法典·侵权编": {
+ "source": "litigation-legal/references/china-tort-law-alignment.md",
+ "description": "Tort liability, imputation principles, damages, special torts",
+ "articles": [
+ {
+ "article": "第1165条",
+ "title": "过错责任原则",
+ "elements": [
+ "因过错侵害他人民事权益"
+ ],
+ "legal_effect": "承担侵权责任",
+ "type": "效力性",
+ "keywords": [
+ "侵权",
+ "过错责任"
+ ]
+ },
+ {
+ "article": "第1166条",
+ "title": "无过错责任",
+ "elements": [
+ "法律规定应承担侵权责任的情形"
+ ],
+ "legal_effect": "不论有无过错均应承担",
+ "type": "效力性",
+ "keywords": [
+ "侵权",
+ "无过错责任"
+ ]
+ },
+ {
+ "article": "第1179条",
+ "title": "人身损害赔偿范围",
+ "elements": [
+ "侵害他人造成人身损害"
+ ],
+ "legal_effect": "赔偿医疗费/护理费/交通费/误工费/残疾赔偿金/死亡赔偿金等",
+ "type": "效力性",
+ "keywords": [
+ "人身损害",
+ "赔偿"
+ ]
+ },
+ {
+ "article": "第1183条",
+ "title": "精神损害赔偿",
+ "elements": [
+ "侵害人身权益造成严重精神损害",
+ "或侵害具有人身意义的特定物"
+ ],
+ "legal_effect": "被侵权人有权请求精神损害赔偿",
+ "type": "效力性",
+ "keywords": [
+ "精神损害",
+ "赔偿"
+ ]
+ },
+ {
+ "article": "第1191条",
+ "title": "用人单位责任",
+ "elements": [
+ "工作人员执行工作任务造成他人损害"
+ ],
+ "legal_effect": "用人单位承担侵权责任; 可向有故意或重大过失者追偿",
+ "type": "效力性",
+ "keywords": [
+ "用人单位",
+ "替代责任"
+ ]
+ },
+ {
+ "article": "第1207条",
+ "title": "产品责任惩罚性赔偿",
+ "elements": [
+ "明知产品存在缺陷仍生产/销售",
+ "造成死亡或健康严重损害"
+ ],
+ "legal_effect": "被侵权人有权请求惩罚性赔偿",
+ "type": "效力性",
+ "keywords": [
+ "产品责任",
+ "惩罚性赔偿"
+ ]
+ }
+ ],
+ "version_ref": {
+ "law": "中华人民共和国民法典",
+ "effective_date": "2021-01-01",
+ "current_version": "2020年5月28日第十三届全国人大三次会议通过",
+ "status": "现行有效",
+ "next_check": "2026-06-01",
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ }
+ },
+ "公司法(2024)": {
+ "source": "corporate-legal/references/company-law-2024-core.md",
+ "description": "Company formation, governance, shareholder rights, director duties, changes and dissolution",
+ "articles": [
+ {
+ "article": "第23条",
+ "title": "公司人格否认",
+ "elements": [
+ "股东滥用公司法人独立地位和有限责任",
+ "逃避债务",
+ "严重损害债权人利益"
+ ],
+ "legal_effect": "股东对公司债务承担连带责任",
+ "type": "效力性",
+ "keywords": [
+ "人格否认",
+ "刺破面纱"
+ ]
+ },
+ {
+ "article": "第47条",
+ "title": "注册资本认缴制",
+ "elements": [
+ "全体股东认缴出资额",
+ "公司成立之日起5年内缴足"
+ ],
+ "legal_effect": "股东须按期足额缴纳",
+ "type": "效力性",
+ "keywords": [
+ "注册资本",
+ "认缴制",
+ "5年"
+ ]
+ },
+ {
+ "article": "第83条",
+ "title": "规模较小公司简化治理",
+ "elements": [
+ "规模较小或股东人数较少的有限公司"
+ ],
+ "legal_effect": "可不设董事会/监事会, 设一名董事/监事",
+ "type": "授权性",
+ "keywords": [
+ "公司治理",
+ "简化"
+ ]
+ },
+ {
+ "article": "第180条",
+ "title": "董监高忠实勤勉义务",
+ "elements": [
+ "董事/监事/高管对公司负有忠实和勤勉义务"
+ ],
+ "legal_effect": "违反义务所得归公司; 造成损失承担赔偿责任",
+ "type": "效力性",
+ "keywords": [
+ "忠实义务",
+ "勤勉义务",
+ "董监高"
+ ]
+ },
+ {
+ "article": "第182条",
+ "title": "关联交易规制",
+ "elements": [
+ "董事/高管与公司订立合同或交易"
+ ],
+ "legal_effect": "应向董事会或股东会报告并经决议",
+ "type": "效力性",
+ "keywords": [
+ "关联交易",
+ "利益冲突"
+ ]
+ }
+ ],
+ "version_ref": {
+ "law": "中华人民共和国公司法",
+ "effective_date": "2024-07-01",
+ "current_version": "2023年12月29日第十四届全国人大常委会第七次会议修订",
+ "status": "现行有效",
+ "next_check": "2026-06-01",
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ }
+ },
+ "劳动合同法": {
+ "source": "employment-legal/references/labor-core-rules.md",
+ "description": "Labor contract formation, performance, termination, severance pay, collective contracts",
+ "articles": [
+ {
+ "article": "第7条",
+ "title": "劳动关系建立时点",
+ "elements": [
+ "用人单位用工"
+ ],
+ "legal_effect": "自用工之日起建立劳动关系",
+ "type": "定义性",
+ "keywords": [
+ "劳动关系",
+ "用工"
+ ]
+ },
+ {
+ "article": "第10条",
+ "title": "书面合同义务",
+ "elements": [
+ "建立劳动关系"
+ ],
+ "legal_effect": "1个月内订立书面合同; 超期未签支付双倍工资",
+ "type": "强制性",
+ "keywords": [
+ "书面合同",
+ "双倍工资"
+ ]
+ },
+ {
+ "article": "第39条",
+ "title": "过失性解除",
+ "elements": [
+ "试用期不符合录用条件",
+ "严重违反规章制度",
+ "严重失职造成重大损害",
+ "多重劳动关系拒不改正",
+ "欺诈致合同无效",
+ "被追究刑事责任"
+ ],
+ "legal_effect": "可解除劳动合同, 无需支付经济补偿",
+ "type": "授权性",
+ "keywords": [
+ "即时解除",
+ "辞退"
+ ]
+ },
+ {
+ "article": "第40条",
+ "title": "非过失性解除",
+ "elements": [
+ "医疗期满不能从事原工作",
+ "不能胜任经培训调岗仍不胜任",
+ "客观情况重大变化致合同无法履行"
+ ],
+ "legal_effect": "提前30日通知或付代通知金后解除, 须付经济补偿",
+ "type": "效力性",
+ "keywords": [
+ "预告解除",
+ "经济补偿"
+ ]
+ },
+ {
+ "article": "第41条",
+ "title": "经济性裁员",
+ "elements": [
+ "重整",
+ "经营严重困难",
+ "转产/技术革新需裁减",
+ "裁减20人以上或10%以上"
+ ],
+ "legal_effect": "提前30日向工会说明并报告劳动部门后可裁减",
+ "exceptions": [
+ "优先留用: 长期/无固定期限/家庭无其他就业"
+ ],
+ "type": "效力性",
+ "keywords": [
+ "裁员"
+ ]
+ },
+ {
+ "article": "第42条",
+ "title": "禁止解除情形",
+ "elements": [
+ "职业病未做离岗检查",
+ "工伤丧失劳动能力",
+ "医疗期",
+ "女职工三期",
+ "连续15年+距退休不足5年"
+ ],
+ "legal_effect": "不得依第40/41条解除",
+ "type": "禁止性",
+ "keywords": [
+ "禁止解除",
+ "保护期"
+ ]
+ },
+ {
+ "article": "第47条",
+ "title": "经济补偿金",
+ "elements": [
+ "解除或终止符合法定情形"
+ ],
+ "legal_effect": "每满1年付1个月工资; 6月以上按1年; 不满6月付半月",
+ "exceptions": [
+ "上限: 月工资超社平3倍按3倍计算, 最多12年"
+ ],
+ "type": "效力性",
+ "keywords": [
+ "经济补偿",
+ "N+1"
+ ]
+ },
+ {
+ "article": "第87条",
+ "title": "违法解除赔偿金",
+ "elements": [
+ "违反本法解除或终止劳动合同"
+ ],
+ "legal_effect": "按经济补偿金2倍支付赔偿金",
+ "type": "效力性",
+ "keywords": [
+ "违法解除",
+ "2N"
+ ]
+ }
+ ],
+ "version_ref": {
+ "law": "中华人民共和国劳动合同法",
+ "effective_date": "2013-07-01",
+ "current_version": "2012年12月28日第十一届全国人大常委会第三十次会议修正",
+ "status": "现行有效",
+ "next_check": "2026-06-01",
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ }
+ },
+ "数据安全法": {
+ "source": "privacy-legal/references/data_security_law.md",
+ "description": "Data classification, security obligations, important data export, legal liability",
+ "articles": [
+ {
+ "article": "第21条",
+ "title": "数据分类分级",
+ "elements": [
+ "国家建立数据分类分级保护制度"
+ ],
+ "legal_effect": "按重要程度和危害程度分类分级",
+ "type": "定义性",
+ "keywords": [
+ "数据分类",
+ "分级保护"
+ ]
+ },
+ {
+ "article": "第27条",
+ "title": "数据安全保护义务",
+ "elements": [
+ "开展数据处理活动"
+ ],
+ "legal_effect": "应建立管理制度/开展教育培训/采取技术措施",
+ "type": "强制性",
+ "keywords": [
+ "数据安全",
+ "合规"
+ ]
+ },
+ {
+ "article": "第31条",
+ "title": "重要数据出境评估",
+ "elements": [
+ "CIIO收集的重要数据确需出境",
+ "或处理100万人以上个人信息"
+ ],
+ "legal_effect": "应通过国家网信部门安全评估",
+ "type": "强制性",
+ "keywords": [
+ "数据出境",
+ "安全评估"
+ ]
+ },
+ {
+ "article": "第45条",
+ "title": "不履行义务的处罚",
+ "elements": [
+ "不履行数据安全保护义务"
+ ],
+ "legal_effect": "罚款5-50万; 严重者50-200万, 可责令停业/吊销许可",
+ "type": "效力性",
+ "keywords": [
+ "行政处罚",
+ "数据泄露"
+ ]
+ }
+ ],
+ "version_ref": {
+ "law": "中华人民共和国数据安全法",
+ "effective_date": "2021-09-01",
+ "current_version": "2021年6月10日第十三届全国人大常委会第二十九次会议通过",
+ "status": "现行有效",
+ "next_check": "2026-06-01",
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ }
+ },
+ "个人信息保护法": {
+ "source": "privacy-legal/references/personal_information_protection_law.md",
+ "description": "Personal information processing rules, individual rights, processor obligations, cross-border transfer",
+ "articles": [
+ {
+ "article": "第13条",
+ "title": "处理合法性基础",
+ "elements": [
+ "取得同意",
+ "合同必需",
+ "法定职责/义务",
+ "公共卫生",
+ "公共利益报道",
+ "已公开信息"
+ ],
+ "legal_effect": "符合任一即可处理个人信息",
+ "type": "授权性",
+ "keywords": [
+ "同意",
+ "合法性基础"
+ ]
+ },
+ {
+ "article": "第15条",
+ "title": "撤回同意权",
+ "elements": [
+ "基于个人同意处理个人信息"
+ ],
+ "legal_effect": "个人有权撤回同意; 撤回前处理不影响效力",
+ "type": "授权性",
+ "keywords": [
+ "撤回同意"
+ ]
+ },
+ {
+ "article": "第17条",
+ "title": "告知义务",
+ "elements": [
+ "处理个人信息前"
+ ],
+ "legal_effect": "告知处理者/目的/方式/种类/期限/行使权利方式等",
+ "type": "强制性",
+ "keywords": [
+ "告知",
+ "透明度"
+ ]
+ },
+ {
+ "article": "第38条",
+ "title": "跨境提供条件",
+ "elements": [
+ "确需向境外提供个人信息"
+ ],
+ "legal_effect": "须通过: 安全评估/认证/标准合同/其他条件",
+ "type": "强制性",
+ "keywords": [
+ "数据出境",
+ "标准合同"
+ ]
+ },
+ {
+ "article": "第47条",
+ "title": "删除权",
+ "elements": [
+ "目的已实现/无法实现",
+ "停止服务",
+ "保存期限届满",
+ "撤回同意",
+ "违法处理"
+ ],
+ "legal_effect": "处理者应主动或依请求删除",
+ "type": "效力性",
+ "keywords": [
+ "删除权"
+ ]
+ },
+ {
+ "article": "第66条",
+ "title": "违法处理处罚",
+ "elements": [
+ "违法处理个人信息或未履行保护义务"
+ ],
+ "legal_effect": "情节严重: 罚款5000万以下或上年营业额5%以下; 暂停业务/停业/吊销许可",
+ "type": "效力性",
+ "keywords": [
+ "行政处罚",
+ "高额罚款"
+ ]
+ }
+ ],
+ "version_ref": {
+ "law": "中华人民共和国个人信息保护法",
+ "effective_date": "2021-11-01",
+ "current_version": "2021年8月20日第十三届全国人大常委会第三十次会议通过",
+ "status": "现行有效",
+ "next_check": "2026-06-01",
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ }
+ },
+ "民事诉讼法": {
+ "source": "litigation-legal/references/civil-procedure-core.md",
+ "description": "Jurisdiction, trial procedures, evidence, enforcement",
+ "articles": [
+ {
+ "article": "第22条",
+ "title": "一般地域管辖",
+ "elements": [
+ "对公民提起民事诉讼"
+ ],
+ "legal_effect": "由被告住所地法院管辖; 经常居住地不一致按经常居住地",
+ "type": "定义性",
+ "keywords": [
+ "管辖",
+ "原告就被告"
+ ]
+ },
+ {
+ "article": "第24条",
+ "title": "合同纠纷管辖",
+ "elements": [
+ "因合同纠纷提起诉讼"
+ ],
+ "legal_effect": "由被告住所地或合同履行地法院管辖",
+ "type": "定义性",
+ "keywords": [
+ "管辖",
+ "合同"
+ ]
+ },
+ {
+ "article": "第35条",
+ "title": "协议管辖",
+ "elements": [
+ "合同或其他财产权益纠纷",
+ "书面协议选择法院"
+ ],
+ "legal_effect": "可选择与争议有实际联系地点的法院",
+ "exceptions": [
+ "不违反级别管辖和专属管辖"
+ ],
+ "type": "授权性",
+ "keywords": [
+ "协议管辖"
+ ]
+ },
+ {
+ "article": "第67条",
+ "title": "举证责任",
+ "elements": [
+ "当事人对自己提出的主张"
+ ],
+ "legal_effect": "有责任提供证据",
+ "type": "定义性",
+ "keywords": [
+ "举证责任",
+ "谁主张谁举证"
+ ]
+ },
+ {
+ "article": "第68条",
+ "title": "证据交换",
+ "elements": [
+ "法院组织庭前程序"
+ ],
+ "legal_effect": "当事人可相互交换证据, 明确争议焦点",
+ "type": "定义性",
+ "keywords": [
+ "证据交换"
+ ]
+ },
+ {
+ "article": "第125条",
+ "title": "起诉条件",
+ "elements": [
+ "原告与本案有直接利害关系",
+ "有明确被告",
+ "有具体诉请和事实理由",
+ "属法院受理和管辖范围"
+ ],
+ "legal_effect": "符合条件应予立案",
+ "type": "定义性",
+ "keywords": [
+ "起诉",
+ "立案"
+ ]
+ },
+ {
+ "article": "第255条",
+ "title": "限制高消费",
+ "elements": [
+ "被执行人未按执行通知履行义务"
+ ],
+ "legal_effect": "可采取限制消费措施(禁飞/禁高铁一等/禁星级酒店等)",
+ "type": "效力性",
+ "keywords": [
+ "限高",
+ "执行"
+ ]
+ }
+ ],
+ "version_ref": {
+ "law": "中华人民共和国民事诉讼法",
+ "effective_date": "2024-01-01",
+ "current_version": "2023年9月1日第十四届全国人大常委会第五次会议修正",
+ "status": "现行有效",
+ "next_check": "2026-06-01",
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ }
+ },
+ "反不正当竞争法": {
+ "source": "regulatory-legal/references/online_anti_unfair_competition_provisions.md",
+ "description": "Confusion, commercial bribery, false advertising, trade secrets, online unfair competition",
+ "articles": [
+ {
+ "article": "第6条",
+ "title": "混淆行为",
+ "elements": [
+ "擅自使用与他人有一定影响的商品名称/包装/装潢/企业名称等相同或近似标识"
+ ],
+ "legal_effect": "构成不正当竞争, 停止侵权+赔偿",
+ "type": "禁止性",
+ "keywords": [
+ "混淆",
+ "仿冒"
+ ]
+ },
+ {
+ "article": "第7条",
+ "title": "商业贿赂",
+ "elements": [
+ "以财物或其他手段贿赂交易相对方人员以谋取交易机会或竞争优势"
+ ],
+ "legal_effect": "罚款10万-300万; 情节严重吊销执照",
+ "exceptions": [
+ "明示并如实入账的折扣/佣金除外"
+ ],
+ "type": "禁止性",
+ "keywords": [
+ "商业贿赂"
+ ]
+ },
+ {
+ "article": "第8条",
+ "title": "虚假宣传",
+ "elements": [
+ "对商品性能/功能/质量/销售状况/用户评价等作虚假或引人误解的商业宣传"
+ ],
+ "legal_effect": "罚款20万-100万; 情节严重100万-200万",
+ "type": "禁止性",
+ "keywords": [
+ "虚假宣传"
+ ]
+ },
+ {
+ "article": "第9条",
+ "title": "侵犯商业秘密",
+ "elements": [
+ "以盗窃/贿赂/欺诈/胁迫/电子侵入等不正当手段获取商业秘密",
+ "或披露/使用/允许他人使用"
+ ],
+ "legal_effect": "罚款10万-100万; 情节严重50万-500万",
+ "type": "禁止性",
+ "keywords": [
+ "商业秘密"
+ ]
+ },
+ {
+ "article": "第12条",
+ "title": "网络不正当竞争",
+ "elements": [
+ "利用技术手段影响用户选择",
+ "误导/欺骗/强迫修改/关闭/卸载他人产品",
+ "恶意不兼容"
+ ],
+ "legal_effect": "罚款10万-50万; 情节严重50万-300万",
+ "type": "禁止性",
+ "keywords": [
+ "网络",
+ "平台"
+ ]
+ }
+ ],
+ "version_ref": {
+ "law": "中华人民共和国反不正当竞争法",
+ "effective_date": "2019-04-23",
+ "current_version": "2019年4月23日第十三届全国人大常委会第十次会议修正",
+ "status": "现行有效",
+ "next_check": "2026-06-01",
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ }
+ },
+ "消费者权益保护法实施条例(2024)": {
+ "source": "国务院令第778号, 2024年7月1日施行",
+ "description": "消费者权利扩展、经营者义务细化、网络消费、预付式消费、自动续费、免费试用等新型消费场景的规则",
+ "articles": [
+ {
+ "article": "第7条",
+ "title": "免费提供商品/服务的经营者责任",
+ "elements": [
+ "以奖励/赠送/试用等形式免费提供商品或服务"
+ ],
+ "legal_effect": "应保证符合人身/财产安全要求; 瑕疵需如实告知",
+ "exceptions": [
+ "瑕疵不违反强制性规定且不影响正常使用性能的除外"
+ ],
+ "type": "效力性",
+ "keywords": [
+ "免费试用",
+ "赠品",
+ "安全保障"
+ ]
+ },
+ {
+ "article": "第9条",
+ "title": "禁止虚假宣传(大数据杀熟)",
+ "elements": [
+ "虚构资质/资格/荣誉",
+ "虚构交易信息/经营数据",
+ "篡改/编造/隐匿用户评价",
+ "同等条件不同价格/收费标准"
+ ],
+ "legal_effect": "构成虚假或引人误解的宣传，欺骗/误导消费者",
+ "type": "禁止性",
+ "keywords": [
+ "虚假宣传",
+ "杀熟",
+ "刷单",
+ "隐匿评价"
+ ]
+ },
+ {
+ "article": "第10条",
+ "title": "自动续费/自动展期提示义务",
+ "elements": [
+ "经营者采取自动展期/自动续费等方式提供服务"
+ ],
+ "legal_effect": "应在消费者接受服务前和自动扣费日期前，以显著方式提请消费者注意",
+ "type": "强制性",
+ "keywords": [
+ "自动续费",
+ "自动展期",
+ "提示义务"
+ ]
+ },
+ {
+ "article": "第11条",
+ "title": "禁止强制/变相强制交易",
+ "elements": [
+ "以暴力/胁迫/限制人身自由",
+ "利用技术手段",
+ "搭配/组合方式"
+ ],
+ "legal_effect": "不得强制或变相强制消费者购买; 搭配销售需显著提示",
+ "type": "禁止性",
+ "keywords": [
+ "强制交易",
+ "搭售",
+ "组合销售"
+ ]
+ },
+ {
+ "article": "第14条",
+ "title": "直播带货经营者信息披露",
+ "elements": [
+ "经营者通过网络直播等方式提供商品或服务"
+ ],
+ "legal_effect": "应依法履行信息披露义务; 直播间运营者/直播营销人员应显著标明其真实名称或标记",
+ "type": "强制性",
+ "keywords": [
+ "直播带货",
+ "信息披露",
+ "真实名称"
+ ]
+ },
+ {
+ "article": "第19条",
+ "title": "预付式消费经营者义务",
+ "elements": [
+ "经营者收取预付款",
+ "未按约定提供商品或服务",
+ "重大经营风险影响提供商品或服务"
+ ],
+ "legal_effect": "应停止收取预付款; 停业/迁址需提前30日公告; 消费者有权要求退款",
+ "type": "效力性",
+ "keywords": [
+ "预付卡",
+ "预付款",
+ "退款",
+ "停业公告"
+ ]
+ },
+ {
+ "article": "第24条",
+ "title": "七日无理由退货细化",
+ "elements": [
+ "消费者通过网络/电视/电话/邮购购买商品"
+ ],
+ "legal_effect": "自收到商品之日起7日内可无理由退货",
+ "exceptions": [
+ "消费者定作",
+ "鲜活易腐",
+ "数字化商品",
+ "报纸期刊",
+ "拆封后影响人身健康的"
+ ],
+ "type": "授权性",
+ "keywords": [
+ "七日无理由",
+ "退货",
+ "冷静期"
+ ]
+ },
+ {
+ "article": "第49条",
+ "title": "惩罚性赔偿适用",
+ "elements": [
+ "经营者提供商品或服务有欺诈行为"
+ ],
+ "legal_effect": "应增加赔偿至价款或服务费用的3倍; 不足500元按500元",
+ "exceptions": [
+ "食品/药品适用食安法/药管法更高标准"
+ ],
+ "type": "效力性",
+ "keywords": [
+ "惩罚性赔偿",
+ "三倍",
+ "欺诈",
+ "最低500"
+ ]
+ }
+ ],
+ "version_ref": {
+ "law": "中华人民共和国消费者权益保护法实施条例",
+ "effective_date": "2024-07-01",
+ "current_version": "2024年3月15日国务院令第778号",
+ "status": "现行有效",
+ "next_check": "2026-07-01",
+ "source_url": "https://www.gov.cn/zhengce/content/202403/content_6940158.htm"
+ }
+ },
+ "合同行政监督管理办法(2023)": {
+ "source": "国家市场监督管理总局令第77号, 2023年7月1日施行",
+ "description": "市场监管部门对经营者合同的行政监管规则，尤其是格式条款的合规要求",
+ "articles": [
+ {
+ "article": "第5条",
+ "title": "禁止利用合同从事违法行为",
+ "elements": [
+ "虚构合同主体资格/盗用冒用他人名义",
+ "无实际履行能力诱骗订约",
+ "故意隐瞒重大影响信息",
+ "恶意串通/贿赂/胁迫订约"
+ ],
+ "legal_effect": "构成利用合同扰乱市场秩序——市场监管部门可处罚",
+ "type": "禁止性",
+ "keywords": [
+ "合同违法",
+ "欺诈",
+ "虚构主体"
+ ]
+ },
+ {
+ "article": "第6条",
+ "title": "格式条款显著提示义务",
+ "elements": [
+ "采用格式条款与消费者订立合同"
+ ],
+ "legal_effect": "应以单独告知/字体加粗/弹窗等显著方式提请注意商品的量/质/价款/费用/期限/安全注意事项/售后/民事责任等重大利害关系内容",
+ "type": "强制性",
+ "keywords": [
+ "格式条款",
+ "显著提示",
+ "加粗",
+ "弹窗"
+ ]
+ },
+ {
+ "article": "第7条",
+ "title": "禁止格式条款免除经营者责任",
+ "elements": [
+ "格式条款含以下内容: 免除人身伤害责任/免除故意或重大过失财产损失责任/免除修理重作更换退货补足退款责任/免除违约责任/免除协助通知保密义务"
+ ],
+ "legal_effect": "该格式条款无效 + 市场监管部门处罚",
+ "type": "禁止性",
+ "keywords": [
+ "格式条款无效",
+ "免责条款",
+ "霸王条款"
+ ]
+ },
+ {
+ "article": "第8条",
+ "title": "禁止格式条款加重消费者责任/排除权利",
+ "elements": [
+ "违约金或赔偿金超法定/合理数额",
+ "要求消费者承担经营风险",
+ "排除自主选择权/变更解除权/投诉举报起诉权",
+ "经营者单方享有最终解释权"
+ ],
+ "legal_effect": "该格式条款无效; 最终解释权条款明确禁止",
+ "type": "禁止性",
+ "keywords": [
+ "格式条款",
+ "最终解释权",
+ "加重责任",
+ "排除权利"
+ ]
+ },
+ {
+ "article": "第9条",
+ "title": "禁止技术手段强制交易",
+ "elements": [
+ "利用格式条款并借助技术手段强制交易"
+ ],
+ "legal_effect": "构成违法——不可借助技术手段强迫消费者接受条款",
+ "type": "禁止性",
+ "keywords": [
+ "强制交易",
+ "技术手段",
+ "格式条款"
+ ]
+ },
+ {
+ "article": "第14条",
+ "title": "合同示范文本",
+ "elements": [
+ "市场监管部门制定和推行合同示范文本"
+ ],
+ "legal_effect": "示范文本供社会公众免费参照使用; 经营者可参照示范文本订立合同",
+ "type": "授权性",
+ "keywords": [
+ "示范文本",
+ "合同范本"
+ ]
+ },
+ {
+ "article": "第16条",
+ "title": "合同违法举报与处理",
+ "elements": [
+ "任何单位和个人发现利用合同从事违法行为"
+ ],
+ "legal_effect": "有权向市场监管部门举报; 市监部门应公布举报方式并依法处理",
+ "type": "效力性",
+ "keywords": [
+ "举报",
+ "市场监管"
+ ]
+ },
+ {
+ "article": "第18条",
+ "title": "违反格式条款规则的处罚",
+ "elements": [
+ "违反第6/7/8/9条格式条款规定"
+ ],
+ "legal_effect": "警告 + 可处10万元以下罚款; 法律法规另有规定的从其规定",
+ "type": "效力性",
+ "keywords": [
+ "罚款",
+ "格式条款",
+ "行政处罚"
+ ]
+ }
+ ],
+ "version_ref": {
+ "law": "合同行政监督管理办法",
+ "effective_date": "2023-07-01",
+ "current_version": "2023年5月18日国家市场监督管理总局令第77号",
+ "status": "现行有效",
+ "next_check": "2026-07-01",
+ "source_url": "https://www.gov.cn/gongbao/2023/issue_10666/202307/content_6892295.htm"
+ }
+ },
+ "广告法": {
+ "source": "中华人民共和国广告法(2021修正), product-legal/references/advertising_law.md",
+ "description": "广告内容准则、虚假广告认定、绝对化用语禁令、法律责任(连带赔偿)",
+ "articles": [
+ {
+ "article": "第9条",
+ "title": "广告内容禁止情形",
+ "elements": [
+ "使用国旗/国歌/国徽/军旗/军歌/军徽",
+ "使用国家机关/工作人员名义",
+ "使用'国家级''最高级''最佳'等绝对化用语",
+ "损害国家尊严或泄露秘密",
+ "妨碍社会安定/损害公共利益",
+ "危害人身财产安全/泄露隐私",
+ "妨碍公序良俗",
+ "淫秽/色情/赌博/迷信/恐怖/暴力",
+ "歧视内容"
+ ],
+ "legal_effect": "禁止发布; 违者处20万-100万罚款, 情节严重吊销执照",
+ "type": "禁止性",
+ "keywords": [
+ "广告",
+ "绝对化用语",
+ "国家级",
+ "最佳"
+ ]
+ },
+ {
+ "article": "第28条",
+ "title": "虚假广告认定",
+ "elements": [
+ "商品或服务不存在",
+ "性能/功能/产地/质量/价格等与实际情况不符且对购买有实质性影响",
+ "使用虚构/伪造/无法验证的科研成果/统计/调查数据作证明",
+ "虚构使用效果"
+ ],
+ "legal_effect": "构成虚假广告——责令停发+消除影响+罚款+可能的刑事责任",
+ "type": "禁止性",
+ "keywords": [
+ "虚假广告",
+ "欺骗",
+ "误导"
+ ]
+ },
+ {
+ "article": "第55条",
+ "title": "虚假广告处罚",
+ "elements": [
+ "发布虚假广告"
+ ],
+ "legal_effect": "广告费3-5倍罚款; 费用无法计算/明显偏低的处20万-100万; 2年3次以上或有严重情节的: 5-10倍罚款或100万-200万, 可吊销执照, 撤销审查批准",
+ "type": "效力性",
+ "keywords": [
+ "虚假广告",
+ "罚款",
+ "吊销执照"
+ ]
+ },
+ {
+ "article": "第56条",
+ "title": "虚假广告连带责任",
+ "elements": [
+ "发布虚假广告",
+ "欺骗误导消费者致其损害"
+ ],
+ "legal_effect": "广告主赔偿; 广告经营者/发布者无法提供广告主真实信息的先行赔偿; 关系生命健康的商品/服务: 经营者/发布者/代言人与广告主连带; 其他商品/服务: 明知或应知虚假的承担连带",
+ "exceptions": [
+ "非生命健康领域且不知情的经营者/代言人不连带"
+ ],
+ "type": "效力性",
+ "keywords": [
+ "虚假广告",
+ "连带责任",
+ "代言人",
+ "先行赔偿"
+ ]
+ },
+ {
+ "article": "第57条",
+ "title": "绝对禁止类广告处罚",
+ "elements": [
+ "发布第9条/第10条禁止情形广告",
+ "发布处方药/毒化学品广告",
+ "发布烟草广告",
+ "利用未成年人代言(不满10周岁)",
+ "在中小学校/幼儿园发布广告"
+ ],
+ "legal_effect": "广告主: 20万-100万罚款+可吊销执照; 经营者/发布者: 没收广告费+20万-100万罚款+可吊销执照",
+ "type": "效力性",
+ "keywords": [
+ "绝对禁止",
+ "烟草",
+ "未成年人",
+ "学校广告",
+ "处方药"
+ ]
+ }
+ ],
+ "version_ref": {
+ "law": "中华人民共和国广告法",
+ "effective_date": "2021-04-29",
+ "current_version": "2021年4月29日第十三届全国人大常委会第二十八次会议修正",
+ "status": "现行有效",
+ "next_check": "2026-06-01",
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ }
+ }
+ }
+}

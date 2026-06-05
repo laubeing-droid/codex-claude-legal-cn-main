@@ -1,0 +1,54 @@
+# License
+
+## unified-legal-ai-cn
+
+MIT License
+
+Copyright (c) 2026 laubeing-droid
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 技能模块许可
+
+| 模块 | 许可 |
+|:---|:---|
+| `.claude/`（编排层） | MIT |
+| `skills/knowledge/`（知识层） | MIT |
+| `skills/tools/`（工具层） | MIT |
+| `skills/shared/`（共享数据层） | MIT |
+| `vscode-extension/` | MIT |
+| `data/权威裁判规则数据库/` | MIT |
+
+各技能文件的 YAML frontmatter 中标注 `license: MIT`、`author: laubeing-droid`。
+
+---
+
+## 致谢
+
+本项目在方法论和架构上受益于中国法律 AI 开源社区的前沿探索。所有内容均为独立创作，
+不包含第三方原始表达。
+
+---
+
+## 外部数据插件
+
+`data/权威裁判规则数据库/` 中的裁判规则数据来源于公开法律实务文献的蒸馏整理，
+用于成文法检索的裁判口径补充参考，不构成正式法律意见。

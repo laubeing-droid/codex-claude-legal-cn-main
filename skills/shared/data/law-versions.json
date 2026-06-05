@@ -1,0 +1,410 @@
+{
+ "meta": {
+ "description": "中国法律版本追踪 — 记录每部法律的现行版本/施行日期/修订历史/最后核实日期。与 law-semantic-tree.json 联动：法律修订时自动标记受影响的法条。",
+ "last_updated": "2026-05-25",
+ "check_cycle": "每月1日 GitHub Actions 自动核实",
+ "total_laws": 10,
+ "total_interpretations": 9
+ },
+ "laws": {
+ "中华人民共和国民法典": {
+ "current_version": "2020年5月28日第十三届全国人大三次会议通过",
+ "effective_date": "2021-01-01",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2020-05-28",
+ "description": "第十三届全国人大三次会议通过，取代婚姻法/继承法/民法通则/收养法/担保法/合同法/物权法/侵权责任法/民法总则"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "law-semantic-tree.json → 民法典·合同编(13条)",
+ "law-semantic-tree.json → 民法典·侵权编(6条)"
+ ],
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D",
+ "upcoming": [
+ {
+ "description": "最高人民法院民法典合同编通则司法解释(2023)已发布",
+ "status": "已纳入 judicial-interpretations.json"
+ },
+ {
+ "description": "最高人民法院民法典侵权编司法解释(一)征求意见中",
+ "status": "待纳入"
+ }
+ ]
+ },
+ "中华人民共和国公司法": {
+ "current_version": "2023年12月29日第十四届全国人大常委会第七次会议修订",
+ "effective_date": "2024-07-01",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "1993-12-29",
+ "description": "第八届全国人大常委会第五次会议通过"
+ },
+ {
+ "date": "1999-12-25",
+ "description": "第一次修正"
+ },
+ {
+ "date": "2004-08-28",
+ "description": "第二次修正"
+ },
+ {
+ "date": "2005-10-27",
+ "description": "第一次修订（全面修改）"
+ },
+ {
+ "date": "2013-12-28",
+ "description": "第三次修正（注册资本认缴制）"
+ },
+ {
+ "date": "2018-10-26",
+ "description": "第四次修正"
+ },
+ {
+ "date": "2023-12-29",
+ "description": "第二次修订（全面修改：5年认缴制/简化治理/董监高义务强化/横向刺破面纱）"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "law-semantic-tree.json → 公司法(2024)(5条)"
+ ],
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ },
+ "中华人民共和国劳动合同法": {
+ "current_version": "2012年12月28日第十一届全国人大常委会第三十次会议修正",
+ "effective_date": "2013-07-01",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2007-06-29",
+ "description": "第十届全国人大常委会第二十八次会议通过"
+ },
+ {
+ "date": "2012-12-28",
+ "description": "修正（劳务派遣相关规定）"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "law-semantic-tree.json → 劳动合同法(8条)"
+ ],
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ },
+ "中华人民共和国数据安全法": {
+ "current_version": "2021年6月10日第十三届全国人大常委会第二十九次会议通过",
+ "effective_date": "2021-09-01",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2021-06-10",
+ "description": "第十三届全国人大常委会第二十九次会议通过"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "law-semantic-tree.json → 数据安全法(4条)",
+ "regulatory-compliance-tree.json → 数据分类分级"
+ ],
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D",
+ "upcoming": [
+ {
+ "description": "网络数据安全管理条例(2025年1月1日施行)",
+ "status": "已纳入 regulatory-compliance-tree.json → 数据分类分级"
+ }
+ ]
+ },
+ "中华人民共和国个人信息保护法": {
+ "current_version": "2021年8月20日第十三届全国人大常委会第三十次会议通过",
+ "effective_date": "2021-11-01",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2021-08-20",
+ "description": "第十三届全国人大常委会第三十次会议通过"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "law-semantic-tree.json → 个人信息保护法(6条)",
+ "regulatory-compliance-tree.json → APP合规/数据出境"
+ ],
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D",
+ "upcoming": [
+ {
+ "description": "个人信息出境标准合同办法(2023)已发布",
+ "status": "已纳入 regulatory-compliance-tree.json → 标准合同"
+ },
+ {
+ "description": "数据出境安全评估办法(2022)已发布",
+ "status": "已纳入 regulatory-compliance-tree.json → 安全评估"
+ }
+ ]
+ },
+ "中华人民共和国民事诉讼法": {
+ "current_version": "2023年9月1日第十四届全国人大常委会第五次会议修正",
+ "effective_date": "2024-01-01",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "1991-04-09",
+ "description": "第七届全国人大四次会议通过"
+ },
+ {
+ "date": "2007-10-28",
+ "description": "第一次修正"
+ },
+ {
+ "date": "2012-08-31",
+ "description": "第二次修正"
+ },
+ {
+ "date": "2017-06-27",
+ "description": "第三次修正"
+ },
+ {
+ "date": "2021-12-24",
+ "description": "第四次修正（在线诉讼/简易程序等）"
+ },
+ {
+ "date": "2023-09-01",
+ "description": "第五次修正（涉外民事诉讼程序专章/外国法院判决承认与执行）"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "law-semantic-tree.json → 民事诉讼法(7条)"
+ ],
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ },
+ "中华人民共和国反不正当竞争法": {
+ "current_version": "2019年4月23日第十三届全国人大常委会第十次会议修正",
+ "effective_date": "2019-04-23",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "1993-09-02",
+ "description": "第八届全国人大常委会第三次会议通过"
+ },
+ {
+ "date": "2017-11-04",
+ "description": "修订（增加网络不正当竞争条款）"
+ },
+ {
+ "date": "2019-04-23",
+ "description": "修正（强化商业秘密保护/提高惩罚性赔偿上限至500万）"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "law-semantic-tree.json → 反不正当竞争法(5条)"
+ ],
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ },
+ "中华人民共和国广告法": {
+ "current_version": "2021年4月29日第十三届全国人大常委会第二十八次会议修正",
+ "effective_date": "2021-04-29",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "1994-10-27",
+ "description": "通过"
+ },
+ {
+ "date": "2015-04-24",
+ "description": "修订"
+ },
+ {
+ "date": "2018-10-26",
+ "description": "第一次修正"
+ },
+ {
+ "date": "2021-04-29",
+ "description": "第二次修正"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "law-semantic-tree.json → 广告法(5条)"
+ ],
+ "source_url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3NTJiN2Q0YTAxNzVlNDc1NmJhNDA0NTc%3D"
+ },
+ "中华人民共和国消费者权益保护法实施条例": {
+ "current_version": "2024年3月15日国务院令第778号",
+ "effective_date": "2024-07-01",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2024-03-15",
+ "description": "国务院令第778号公布（首次制定实施条例）"
+ }
+ ],
+ "next_check": "2026-07-01",
+ "affected_trees": [
+ "law-semantic-tree.json → 消费者权益保护法实施条例(8条)"
+ ],
+ "source_url": "https://www.gov.cn/zhengce/content/202403/content_6940158.htm"
+ },
+ "合同行政监督管理办法": {
+ "current_version": "2023年5月18日国家市场监督管理总局令第77号",
+ "effective_date": "2023-07-01",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2023-05-18",
+ "description": "市监总局令第77号（取代2010年合同违法行为监督处理办法）"
+ }
+ ],
+ "next_check": "2026-07-01",
+ "affected_trees": [
+ "law-semantic-tree.json → 合同行政监督管理办法(8条)"
+ ],
+ "source_url": "https://www.gov.cn/gongbao/2023/issue_10666/202307/content_6892295.htm"
+ }
+ },
+ "judicial_interpretations": {
+ "民法典合同编通则司法解释": {
+ "number": "法释〔2023〕12号",
+ "effective_date": "2023-12-05",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2023-12-05",
+ "description": "最高人民法院发布"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "judicial-interpretations.json → 民法典合同编(7条规则)"
+ ]
+ },
+ "民法典侵权编司法解释(征求意见中)": {
+ "number": "征求意见稿",
+ "effective_date": "未施行",
+ "status": "征求意见中",
+ "amendment_history": [],
+ "next_check": "2026-06-01",
+ "affected_trees": [],
+ "note": "重点关注正式发布后的更新"
+ },
+ "公司法司法解释(一)-(五)": {
+ "number": "法释〔2006〕3号/〔2008〕6号/〔2011〕3号/〔2017〕5号/〔2019〕7号",
+ "effective_date": "2019-04-29(之五)",
+ "status": "现行有效(部分与新公司法2024冲突待修订)",
+ "amendment_history": [
+ {
+ "date": "2019-04-29",
+ "description": "之五发布（关联交易/利润分配时效）"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "judicial-interpretations.json → 公司法(5条规则)"
+ ],
+ "note": "公司法2024年修订后，部分规定(如认缴制)与旧解释冲突，最高法尚未发布新配套解释"
+ },
+ "劳动争议司法解释(一)": {
+ "number": "法释〔2020〕26号",
+ "effective_date": "2021-01-01",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2021-01-01",
+ "description": "最高人民法院发布（整合原四个劳动争议解释）"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "judicial-interpretations.json → 劳动合同法(4条规则)"
+ ]
+ },
+ "民事诉讼法司法解释": {
+ "number": "法释〔2022〕11号",
+ "effective_date": "2022-04-10",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2015-02-04",
+ "description": "法释〔2015〕5号发布"
+ },
+ {
+ "date": "2020-12-29",
+ "description": "第一次修正"
+ },
+ {
+ "date": "2022-04-10",
+ "description": "第二次修正（法释〔2022〕11号）"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "judicial-interpretations.json → 民事诉讼法(5条规则)"
+ ],
+ "note": "2023年民诉法修正后，司法解释需同步更新——关注最高法动态"
+ },
+ "反不正当竞争法司法解释": {
+ "number": "法释〔2022〕9号",
+ "effective_date": "2022-03-20",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2022-03-20",
+ "description": "最高人民法院发布（取代2007年旧解释）"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "judicial-interpretations.json → 反不正当竞争法(3条规则)"
+ ]
+ },
+ "人脸识别司法解释": {
+ "number": "法释〔2021〕15号",
+ "effective_date": "2021-08-01",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2021-08-01",
+ "description": "最高人民法院发布"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "judicial-interpretations.json → 个人信息保护(3条规则)"
+ ]
+ },
+ "生成式AI管理办法": {
+ "number": "国家互联网信息办公室等7部门令第15号",
+ "effective_date": "2023-08-15",
+ "status": "暂行办法（暂行期限：未明确→可能升级为正式办法）",
+ "amendment_history": [
+ {
+ "date": "2023-08-15",
+ "description": "施行"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "regulatory-compliance-tree.json → 生成式AI监管"
+ ],
+ "note": "⚠️ 暂行办法可能升级为正式行政法规——重点监控"
+ },
+ "算法推荐管理规定": {
+ "number": "国家互联网信息办公室等4部门令第9号",
+ "effective_date": "2022-03-01",
+ "status": "现行有效",
+ "amendment_history": [
+ {
+ "date": "2022-03-01",
+ "description": "施行"
+ }
+ ],
+ "next_check": "2026-06-01",
+ "affected_trees": [
+ "regulatory-compliance-tree.json → 算法备案"
+ ]
+ }
+ }
+}

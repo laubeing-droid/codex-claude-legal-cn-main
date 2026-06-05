@@ -1,0 +1,45 @@
+{
+ "meta": {
+ "format_version": "1.0",
+ "description": "unified-legal-ai-cn 外部数据插件注册表。Agent 启动时读取此文件，按 authority 升序确立检索优先级，按 type 匹配检索意图。新增外部数据源只需在此文件中追加条目，无需修改任何 Agent Prompt。",
+ "last_updated": "2026-06-05"
+ },
+ "plugins": [
+ {
+ "id": "core-codices",
+ "name": "成文法原文数据库",
+ "authority": 1,
+ "path": "../core-codices",
+ "type": "laws",
+ "description": "162部中国法律/司法解释/行政法规 JSON 全文",
+ "mapping": {
+ "laws": "laws/{name}.json",
+ "interpretations": "interpretations/{name}.json",
+ "regulations": "regulations/{name}.json",
+ "guidance": "guidance/{name}.json"
+ }
+ },
+ {
+ "id": "rules-db",
+ "name": "裁判规则库",
+ "authority": 2,
+ "path": "../data/权威裁判规则数据库",
+ "type": "judicial-rules",
+ "description": "2,117条从法律实务文献蒸馏的裁判规则。涵盖13大法律领域，含审理方法论、推理链、律师实操要点、争议空间等字段。",
+ "entry": "output/rules/rules_all.json",
+ "match_fields": ["案由", "争议焦点", "关键词", "法条依据"],
+ "priority_hint": "STAGE-1 命中成文法后，同步查询本插件获取裁判口径补充"
+    },
+    {
+      "id": "juris-calculus",
+      "name": "符号化法律推理内核",
+      "authority": 0,
+      "path": "../juris-calculus",
+      "type": "inference-engine",
+      "protocol": "MCP stdio",
+      "entry": "mcp_server.py",
+      "description": "跨法域不动点推理引擎。7 工具（trirail_collide/check_threat/generate_memo/route_state/get_citation/get_operator_schemas/generate_task_schema），9 资源（CN 2117 条 Horn 规则/US 81 条/HK 93 条/阻断规则 60 条/术语映射 131 条等）。",
+      "fallback": "MCP 不可达时自动降级为 Prompt 推理模式"
+    }
+ ]
+}

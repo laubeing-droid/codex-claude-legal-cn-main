@@ -1,0 +1,33 @@
+{
+ "_note": "Skill Manager 注册表示例 - 复制此文件为 skill-registry.json 使用",
+ "example-local-skill": {
+ "name": "example-local-skill",
+ "source": "/path/to/local/skills/example-local-skill",
+ "install_type": "local",
+ "installed_at": "2026-04-08T10:00:00+08:00",
+ "last_updated": "2026-04-08T10:00:00+08:00",
+ "last_check_at": null,
+ "installed_version": "1.0.0",
+ "current_version": "1.0.0",
+ "latest_version": null,
+ "install_commit": null,
+ "install_branch": null,
+ "remote_url": null,
+ "description": "示例本地安装的 Skill"
+ },
+ "example-remote-skill": {
+ "name": "example-remote-skill",
+ "source": "https://github.com/owner/skill-repo",
+ "install_type": "remote",
+ "installed_at": "2026-04-08T10:00:00+08:00",
+ "last_updated": "2026-04-08T10:00:00+08:00",
+ "last_check_at": "2026-04-15T10:00:00+08:00",
+ "installed_version": "1.0.0",
+ "current_version": "1.0.0",
+ "latest_version": "1.2.0",
+ "install_commit": "a1b2c3d",
+ "install_branch": "main",
+ "remote_url": "https://github.com/owner/skill-repo",
+ "description": "示例 GitHub 安装的 Skill"
+ }
+}

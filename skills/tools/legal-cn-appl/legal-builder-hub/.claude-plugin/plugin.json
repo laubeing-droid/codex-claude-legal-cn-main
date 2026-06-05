@@ -1,0 +1,8 @@
+{
+  "name": "legal-builder-hub",
+  "version": "1.0.2",
+  "description": "发现、评估和安装社区法律技能 — 以安全审查门控确保任何内容进入你的环境前经过检查。支持白名单（allowlist）、SHA 锁定更新、信任检查与技能质量评估框架。",
+  "author": {
+    "name": "陈石 律师"
+  }
+}

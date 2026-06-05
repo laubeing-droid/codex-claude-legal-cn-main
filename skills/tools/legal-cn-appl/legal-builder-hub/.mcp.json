@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "Slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "title": "Slack",
+      "description": "Search messages, read channels, find discussions across your workspace."
+    },
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Search, read, and fetch documents from Google Drive."
+    },
+    "yuandian": {
+      "type": "http",
+      "url": "https://mcp.yuandian.com/mcp",
+      "title": "元典",
+      "description": "中国法律智能检索平台 — 供社区技能引用中国法律法规、司法解释、裁判文书进行法律检索。"
+    },
+    "pkulaw": {
+      "type": "http",
+      "url": "https://mcp.pkulaw.com/mcp",
+      "title": "北大法宝",
+      "description": "中国法律资源总库 — 供社区技能引用中国法律资源进行法律研究。"
+    }
+  },
+  "recommendedCategories": [
+    "legal-skills-registry",
+    "chat",
+    "documents"
+  ]
+}

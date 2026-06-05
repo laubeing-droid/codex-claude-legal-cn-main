@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "yuandian": {
+      "type": "http",
+      "url": "https://mcp.yuandian.com/mcp",
+      "title": "元典法律检索",
+      "description": "检索法律法规、案例、法学文献——支持个人信息保护法、数据安全法、网络安全法及相关司法解释、部门规章检索。"
+    },
+    "飞书": {
+      "type": "http",
+      "url": "https://open.feishu.cn/mcp",
+      "title": "飞书",
+      "description": "搜索消息、读取群组、查找讨论——中文企业协作平台。"
+    },
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "搜索、读取和获取文档。"
+    }
+  },
+  "recommendedCategories": [
+    "documents",
+    "chat",
+    "email",
+    "legal-document-management",
+    "legal-research"
+  ]
+}

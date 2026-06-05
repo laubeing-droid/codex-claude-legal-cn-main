@@ -1,0 +1,129 @@
+# project-init 配置示例
+# 复制本文件为 profiles.yaml 并根据需要自定义
+#
+# 用法：cp profiles.example.yaml profiles.yaml
+
+# ── 技能源 ──────────────────────────────────────────────
+# 键名（如 legal-skills）供下方 profiles.*.skills 引用；
+# 值为技能目录的本地绝对路径（支持 ~ 展开）。
+skill_sources:
+  legal-skills: ~/Library/Application Support/maoscripts/skills/legal-skills/skills
+
+# ── 配置文件 ──────────────────────────────────────────────
+# 每个配置都是一个识别模板：通过 detect 规则自动匹配项目类型，
+# 并为匹配的项目注入技能、文档和 Claude 指令。
+profiles:
+
+  # ── 开发项目 ──────────────────────────────────────────
+  development:
+    display_name: 开发项目
+    detect:
+      any_of:                       # 文件名匹配（项目根目录）
+        - package.json
+        - pyproject.toml
+        - Cargo.toml
+        - go.mod
+        - requirements.txt
+        - Gemfile
+        - pom.xml
+        - build.gradle
+        - composer.json
+        - Makefile
+    skills:
+      legal-skills:
+        - git-batch-commit          # 智能 Git 批量提交
+        - git-workflow              # Git 全生命周期工作流
+        - release-workflow          # GitHub 发布工作流
+        - multi-agent-orchestration # 多 Agent 并行编排
+        - cross-agent-coordination  # 跨平台 Agent 协调
+        - agent-email               # Agent 邮件通信
+    claude_md: development
+    docs:
+      - docs/ROADMAP.md
+      - docs/DECISIONS.md
+
+  # ── Skill 开发项目 ────────────────────────────────────
+  skill-project:
+    display_name: Skill 开发项目
+    detect:
+      has_skill_md: true
+    skills:
+      legal-skills:
+        - skill-lint
+        - skill-architect
+        - skill-manager
+        - git-batch-commit
+    claude_md: skill-project
+    scaffold:
+      - references
+      - scripts
+      - assets
+    docs:
+      - CHANGELOG.md
+      - DECISIONS.md
+
+  # ── 法律文档项目 ──────────────────────────────────────
+  legal-document:
+    display_name: 法律文档项目
+    detect:
+      extensions:
+        - .docx
+        - .pdf
+        - .doc
+      min_count: 3
+    skills:
+      legal-skills:
+        # OCR 与文档处理
+        - legal-ocr
+        - pdf-processor
+        - pdf-organizer
+        - img2pdf
+        - md2word
+        - legal-text-format
+        # 语音转文字
+        - funasr-transcribe
+        - tingwu-asr
+        # 法律检索
+        - yuandian-law-search
+        - zhihe-legal-research
+        # 案件管理
+        - new-case
+        - court-sms
+        # 合同与诉讼
+        - litigation-analysis
+        - contract-review
+        - contract-copilot
+        - legal-proposal-generator
+        - legal-qa-extractor
+        # 知识产权
+        - patent-analysis
+        - code2patent
+        - trademark-assistant
+        # 常年法律顾问
+        - opc-legal-counsel
+        # 证据处理
+        - video-screenshot
+        - video-compressor
+        # 内容获取
+        - wechat-article-fetch
+        - piclist-upload
+    claude_md: simple
+
+  # ── 内容写作项目 ──────────────────────────────────────
+  content-writing:
+    display_name: 内容写作项目
+    detect:
+      dir_patterns:
+        - blog
+        - posts
+        - articles
+        - content
+        - drafts
+    skills:
+      legal-skills:
+        - de-ai-polish
+        - wechat-article-fetch
+    claude_md: simple
+
+# ── 默认配置 ──────────────────────────────────────────────
+default_profile: development
