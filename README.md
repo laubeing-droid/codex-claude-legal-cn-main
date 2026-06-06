@@ -37,7 +37,7 @@ unified-legal-ai-cn/
 | **Strategist** | SWOT 态势分析 + 多策略方案 + 概率化预判 + 风险矩阵 |
 | **Writer** | 文书起草 + 报告生成 + 双格式输出 |
 
-### 4 个命令
+### 5 个命令
 
 | 命令 | 用途 |
 |------|------|
@@ -45,6 +45,7 @@ unified-legal-ai-cn/
 | `/reviewer` | 独立审计熔断命令 |
 | `/scheduler` | 案件流程调度与期限管理 |
 | `/import-skill` | 导入自定义 Skill（自动分类+审计+归位） |
+| `/self-distill` | 自我蒸馏：扫描工作记录→发现模式→打包SKILL→输出D盘 |
 
 ### 法律护栏
 

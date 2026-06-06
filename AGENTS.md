@@ -93,6 +93,7 @@ DocAnalyzer → IssueIdentifier → [Researcher / Strategist] → Writer → /re
 | `/scheduler` | 案件流程调度 | `/scheduler [案件ID] --status` |
 | `/cold-start` | 首次使用配置（有DNA文件时跳过提问） | `/cold-start` |
 | `/import-skill` | 导入自定义 Skill（自动分类+审计+归位） | `/import-skill [文件路径]` |
+| `/self-distill` | 自我蒸馏：扫描工作记录→打包SKILL→输出D盘 | `/self-distill [--full\|--quick]` |
 
 ---
 
@@ -107,6 +108,38 @@ DocAnalyzer → IssueIdentifier → [Researcher / Strategist] → Writer → /re
 | 方法论/逻辑型 (methodology) | `skills/extensions/{name}.md` | 不自动注入上下文 |
 
 通过 `/import-skill` 命令导入，自动完成 YAML 校验、合规审计、物理归位和路由注册。
+
+---
+
+# 第四部分：自我蒸馏与自动强化（Meta-Cognitive Layer）
+
+## 定位
+
+系统不仅被动执行任务，还能主动审查自己的工作记录，发现重复模式，将其蒸馏为可复用的 SKILL 包。这是 ULA 区别于传统静态技能库的核心能力。
+
+## 闭环
+
+```
+工作记录（memory logs）
+    ↓ 采集
+重复模式识别
+    ↓ 判定（≥2次 + 稳定输入输出 + ROI > 0）
+SKILL.md 生成 → 输出到 D:\Codex\skills-auto\
+    ↓
+/import-skill 导入 → 注册到系统 → 下次可直接调用
+    ↑
+用户确认（人工审核）
+```
+
+## 命令
+
+| 命令 | 职责 |
+|:----|:------|
+| `/self-distill` | 扫描 → 识别 → 蒸馏 → 输出 |
+
+## 输出路径
+
+所有自动生成的 SKILL 包写入 `D:\Codex\skills-auto\{name}\SKILL.md`。
 
 ---
 
