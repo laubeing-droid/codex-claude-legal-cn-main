@@ -63,6 +63,18 @@ DocAnalyzer → IssueIdentifier → [Researcher / Strategist] → Writer → /re
 4. **中文优先** — 所有回复使用中文
 5. **JC 检测优先** — 每个 Agent 启动时检测 juris-calculus 状态，有条件时委托内核
 
+## 全局宪法层（DNA Layer）
+
+系统启动时自动扫描 `.claude/personas/core/user-dna.md`：
+
+- **存在** → 作为 `[GLOBAL_CONSTITUTION]` 注入上下文顶层，优先级 `CRITICAL_OVERRIDE`
+  - 5 个 Agent 的 `agent_overrides` 约束直接生效（见 DNA 文件中的 `## Agent: xxx` 章节）
+  - YAML frontmatter 中的 `current_posture` 和 `risk_tolerance` 作为运行时变量
+  - 修改 YAML 字段后下一条指令即时生效（热重载，无需重启）
+- **不存在** → 系统正常运行，无此层约束
+
+所有 Agent 行为同时受到 DNA 层约束和 JC 内核的推理质量保证。
+
 ## Agent 清单
 
 | Agent | 职责 | 内联知识 | 工具依赖 |
@@ -79,7 +91,7 @@ DocAnalyzer → IssueIdentifier → [Researcher / Strategist] → Writer → /re
 |------|------|------|
 | `/reviewer` | 独立审计熔断 | `/reviewer [目标Agent名称]` |
 | `/scheduler` | 案件流程调度 | `/scheduler [案件ID] --status` |
-| `/cold-start` | 首次使用配置 | `/cold-start [--redo]` |
+| `/cold-start` | 首次使用配置（有DNA文件时跳过提问） | `/cold-start` |
 
 ---
 
