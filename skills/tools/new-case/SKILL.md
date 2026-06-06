@@ -74,7 +74,7 @@ description: 法律案件/咨询项目初始化工具。根据案件类型自动
 ## 四、与其他技能协作
 
 (一) 上游技能
-1. `mineru-ocr`——将扫描件PDF转为Markdown后传入分类
+1. `legal-ocr`——将扫描件PDF转为Markdown后传入分类
 2. `legal-text-format`——格式化裁判文书等正式材料
 
 (二) 下游技能

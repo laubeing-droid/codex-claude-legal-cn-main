@@ -16,7 +16,7 @@ homepage:
 - 同时配置两套 API：本地 PDF / 图片优先 PaddleOCR，Office / 网页 URL 优先 MinerU；首选后端出现额度、频率、鉴权、网络或服务失败时自动尝试候选后端。
 - 两套 API 都未配置：使用 MinerU 轻量接口处理小文件，并在超限时提示补充 Token。
 
-旧的 `paddle-ocr` 和 `mineru-ocr` 保持可用；本技能是新的统一入口，目标是覆盖两者的常用 OCR/转换场景。
+旧的 PaddleOCR API 和 MinerU API 仍可通过本技能配置使用；它们作为后端引擎被 `legal-ocr` 统一调度。不再需要单独安装 `paddle-ocr` 或 `mineru-ocr` 技能（已于 v3.0 重构中合并到此技能）。
 
 ## 何时使用
 

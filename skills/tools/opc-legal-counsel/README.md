@@ -155,6 +155,6 @@ python3 skills/opc-legal-counsel/scripts/check-evals.py skills/opc-legal-counsel
 相关项目：
 
 - [contract-copilot]()：合同审查、起草和 Word 修订批注
-- [trademark-assistant]()：商标类别规划、可注册性初筛和申请材料准备
+- ~~[trademark-assistant]()：商标类别规划、可注册性初筛和申请材料准备（已归档）~~
 - [patent-analysis]()：专利文件分析、侵权比对、FTO 和规避设计
 - [code2patent]()：从代码仓库整理专利交底书和发明专利初稿

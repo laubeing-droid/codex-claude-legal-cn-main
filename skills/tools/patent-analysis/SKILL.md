@@ -82,12 +82,11 @@ description: 系统化分析中国专利文件，覆盖七种业务场景。本�
 ## 五、技能协作
 
 (一) 上游
-1. `mineru-ocr`——专利扫描件转Markdown后传入
+1. `legal-ocr`——专利扫描件转Markdown后传入
 2. `legal-text-format`——规范专利文本结构
 
 (二) 下游
-1. `legal-proposal-generator`——分析结论用于法律服务方案
-2. `code2patent`——基于分析框架辅助撰写申请文件
+1. `litigation-analysis`——分析结论用于诉讼支持
 
 ## 六、注意事项
 

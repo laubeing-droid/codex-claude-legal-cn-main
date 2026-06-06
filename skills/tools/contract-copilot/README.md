@@ -122,6 +122,6 @@ Agent 负责识别风险、形成审查计划和推荐措辞；脚本负责在 D
 相关项目：
 
 - [opc-legal-counsel]()：一人公司、AI 创业团队和小微企业法律顾问
-- [trademark-assistant]()：商标类别规划、可注册性初筛和申请材料准备
+- ~~[trademark-assistant]()：商标类别规划、可注册性初筛和申请材料准备（已归档）~~
 - [patent-analysis]()：专利文件分析、侵权比对、FTO 和规避设计
 - [md2word]()：Markdown 转专业排版 Word 文档
