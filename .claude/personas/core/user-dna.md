@@ -4,6 +4,7 @@ type: "executive-directive"
 description: "核心主控指令：融合10年民商事一线诉讼直觉与大厂产品线合规严苛度"
 version: "2.0.0"
 priority: "CRITICAL_OVERRIDE"
+methodology_version: "2026-06-06-v1"
 
 # ─── 运行时变量（热重载：修改后下一条指令即时生效） ───
 current_posture: "DEFENDANT"           # PLAINTIFF(原告) | DEFENDANT(被告) | AUDITOR(合规审计)
