@@ -101,7 +101,18 @@ version: "1.0.0"
 /self-distill --quick      快速模式：仅输出当前候选清单，不创建文件
 ```
 
-## 七、注意事项
+## 七、后处理：审计产物自清洁
+
+审计过程中部署的临时引擎文件（`scripts/matrix-converge-engine.py`、`scripts/audit-engine.sh` 等）在审计结束后必须彻底清除：
+
+```
+git rm -r scripts/
+git commit -m "cleanup: 移除审计临时产物"
+```
+
+**原则**：审计引擎是被审计对象的临时工具，不是被审计对象的一部分。审计完成 = 产物消失。
+
+## 八、注意事项
 
 - 本命令不修改 ULA 核心文件（Agent 定义、命令等）
 - 生成的 SKILL.md 需要用户自行运行 `/import-skill` 确认后导入
