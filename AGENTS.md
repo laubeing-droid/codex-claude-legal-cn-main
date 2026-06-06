@@ -77,7 +77,7 @@ DocAnalyzer → IssueIdentifier → [Researcher / Strategist] → Writer → /re
 
 ## Agent 清单
 
-| Agent | 职责 | 内联知识 | 工具依赖 |
+| Agent | 职责 | 内联知识（已嵌入Agent定义） | 工具依赖 |
 |-------|------|---------|---------|
 | DocAnalyzer | 文档入口 + 证据分析 | evidence-evaluation, legal-document-summarization | legal-ocr, pdf-organizer, pdf-processor |
 | IssueIdentifier | 争议焦点识别 | conflict-resolution, argument-chain-construction | — |

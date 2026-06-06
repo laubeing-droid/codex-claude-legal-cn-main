@@ -13,7 +13,7 @@
 unified-legal-ai-cn/
 ├── .claude/
 │   ├── agents/        5 个核心 Agent（WorkBuddy Expert / CodeX 兼容）
-│   ├── commands/      3 个命令（cold-start / reviewer / scheduler）
+│   ├── commands/      4 个命令（cold-start / reviewer / scheduler / import-skill）
 │   ├── personas/core/ 5 个冷启动画像模板
 │   └── rules/guards/  2 个法律护栏文件（条件加载）
 ├── skills/
