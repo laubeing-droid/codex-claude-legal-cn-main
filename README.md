@@ -20,6 +20,7 @@ unified-legal-ai-cn/
 │   ├── knowledge/     1 个入口路由（claude-legal-cn）
 │   ├── tools/         17 个法律工具
 │   │   └── legal-cn-appl/  9 个中国法领域应用（7核心+2可选）
+│   ├── extensions/    用户自定义方法论技能（通过 /import-skill 导入）
 │   └── shared/data/   法律语义对齐数据
 ├── data/              权威裁判规则数据库
 ├── docs/              核心文档
@@ -36,13 +37,14 @@ unified-legal-ai-cn/
 | **Strategist** | SWOT 态势分析 + 多策略方案 + 概率化预判 + 风险矩阵 |
 | **Writer** | 文书起草 + 报告生成 + 双格式输出 |
 
-### 3 个命令
+### 4 个命令
 
 | 命令 | 用途 |
 |------|------|
-| `/cold-start` | 首次使用冷启动访谈 |
+| `/cold-start` | 首次使用冷启动访谈（有DNA文件时自动跳过） |
 | `/reviewer` | 独立审计熔断命令 |
 | `/scheduler` | 案件流程调度与期限管理 |
+| `/import-skill` | 导入自定义 Skill（自动分类+审计+归位） |
 
 ### 法律护栏
 

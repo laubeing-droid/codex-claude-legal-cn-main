@@ -92,6 +92,21 @@ DocAnalyzer → IssueIdentifier → [Researcher / Strategist] → Writer → /re
 | `/reviewer` | 独立审计熔断 | `/reviewer [目标Agent名称]` |
 | `/scheduler` | 案件流程调度 | `/scheduler [案件ID] --status` |
 | `/cold-start` | 首次使用配置（有DNA文件时跳过提问） | `/cold-start` |
+| `/import-skill` | 导入自定义 Skill（自动分类+审计+归位） | `/import-skill [文件路径]` |
+
+---
+
+## 自定义 Skill 处理规则
+
+用户自行导入的 Skill 按类型分类归位：
+
+| 类型 | 归位路径 | 说明 |
+|------|---------|------|
+| 领域应用型 (domain) | `skills/tools/legal-cn-appl/{domain}/skills/` | 挂到对应法领域下 |
+| 工具扩展型 (tool) | `skills/tools/custom-{name}/` | 自带 SKILL.md + scripts/ |
+| 方法论/逻辑型 (methodology) | `skills/extensions/{name}.md` | 不自动注入上下文 |
+
+通过 `/import-skill` 命令导入，自动完成 YAML 校验、合规审计、物理归位和路由注册。
 
 ---
 
