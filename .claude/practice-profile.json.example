@@ -1,0 +1,8 @@
+{
+  "role": "律所律师",
+  "stance": "两者",
+  "risk_tolerance": "中性",
+  "primary_domains": ["litigation", "commercial", "corporate", "employment", "privacy", "ai-governance", "product"],
+  "output_style": "详细论证",
+  "juris_calculus_path": "D:\\Codex\\juris-calculus"
+}
