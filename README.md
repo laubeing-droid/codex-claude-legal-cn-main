@@ -70,7 +70,7 @@ unified-legal-ai-cn/
 ### WorkBuddy 安装（推荐）
 
 1. 将本仓库添加到 WorkBuddy 工作区
-2. 在 **Expert Center** 中注册 5 个 Expert
+2. 在 **Expert Center** 中注册 1 个入口 Expert（`claude-legal-cn`）→ 自动挂载仓库内的 17 个法律工具和 9 个领域
 3. 在 **连接器管理** 中注册 juris-calculus MCP（可选）
 4. 首次使用时运行 `/cold-start` 完成配置
 
@@ -107,7 +107,6 @@ unified-legal-ai-cn/
 
 | 数据源 | Token 配置 | 用途 |
 |--------|-----------|------|
-| 北大法宝 | pkulaw MCP 连接器（8 服务） | 法条检索 |
 | 元典智库 | 环境变量配置 | 法律研究 |
 | 智合法律 | 智合会员账号 | 交叉验证 |
 | IMA 知识库 | ima-mcp 连接器（9 个） | 知识管理 |
