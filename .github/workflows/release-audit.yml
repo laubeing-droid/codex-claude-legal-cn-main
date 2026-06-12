@@ -1,0 +1,38 @@
+# ==============================================================================
+# Workflow Name: Pre-Release Automated Security & Integrity Audit
+# Event Trigger: Pull Request / Push to Main/Release Branches
+# ==============================================================================
+
+name: Pre-Release Audit
+
+on:
+  push:
+    branches: [ main, "release/*" ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  static-security-audit:
+    name: Running L1 Hard-Blocking Auditor
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 获取完整历史以确保 diff 计算精确
+
+      - name: Inject Audit Execution Permissions
+        run: chmod +x ./scripts/audit-engine.sh
+
+      - name: Execute Core Desensitization Scan
+        run: |
+          # 在 CI 容器环境中，将当前变更分支与目标基线分支进行 Diff 审计
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git diff origin/${{ github.base_ref }}...HEAD > staged_diff.tmp
+          else
+            git diff HEAD~1...HEAD > staged_diff.tmp
+          fi
+
+          # 运行扫描脚本
+          ./scripts/audit-engine.sh
