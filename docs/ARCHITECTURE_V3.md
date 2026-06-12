@@ -123,52 +123,62 @@ unified-legal-ai-cn/
 
 ## 9. Skill Marketplace Implementation
 
-The marketplace engine lives in the dynamic-update system:
+The marketplace engine is powered by the **legal-repo-consolidation** Codex skill (4-layer pipeline: topology merge -> dedup -> architecture -> license cleaning).
+
+### 9.1 Architecture
 
 ```
-liuweibin-legal-skills_dynamic-update/
-  liuweibin-legal-skills/
-    connectors/
-      marketplace-sources.json     # marketplace source definitions
-      merge_marketplace.py         # sync/merge engine (Python)
-    skills/
-      community/                   # installed 3rd-party skills
-        marketplace.json           # auto-generated manifest
+marketplace-sources.json     # source registry (add repos here)
+merge_marketplace.py         # discovery engine (Layer 1 + 2)
+legal-repo-consolidation     # Codex skill (full 4-layer pipeline)
+
+Pipeline:
+  marketplace-sources.json
+    -> merge_marketplace.py (discover, R_legal score, categorize)
+    -> legal-repo-consolidation (deep merge via Codex)
+    -> skills/{category}/ (6 output categories)
+    -> marketplace-registry.json + marketplace-graph.json
 ```
 
-### 9.1 marketplace-sources.json
+### 9.2 R_legal Scoring
 
-Defines which GitHub repos to pull from. Any repo with SKILL.md files can be a source.
+R_legal = Ch_legal / Ch_total. Measures legal citation density:
+- HIGH (R_legal < 30%, Nctrl >= 5): clean-room rewrite candidate
+- MEDIUM (30% <= R_legal <= 70%): sentence-level interpolation
+- LOW (R_legal > 70%, Nctrl < 5): citation heap -> data/rules/
 
-### 9.2 merge_marketplace.py
+### 9.3 6 Output Categories
+
+| Category | Description |
+|----------|-------------|
+| legal-research | 法条检索、类案搜索、裁判口径归纳 |
+| document-generation | 起诉状、答辩状、代理词生成 |
+| contract-review | 合同审查、条款分析、风险识别 |
+| litigation-support | 质证、庭审模拟、判诉差异分析 |
+| knowledge-management | 法律知识库、裁判规则库 |
+| regulatory-compliance | 劳动仲裁、行政合规、数据隐私 |
+
+### 9.4 CLI
 
 ```bash
 python connectors/merge_marketplace.py           # sync all
 python connectors/merge_marketplace.py --dry-run  # preview
-python connectors/merge_marketplace.py --list     # show installed
+python connectors/merge_marketplace.py --list     # installed by category
+python connectors/merge_marketplace.py --graph    # knowledge graph
 ```
 
-Pipeline: clone/pull repo -> find SKILL.md -> compute compatibility score -> filter by min_score -> copy to skills/community/ -> update marketplace.json manifest.
-
-### 9.3 Integration with Loop Agent
-
-Loop Agent reads `skills/community/marketplace.json` at startup to discover installed skills. Each skill entry has: name, version, source, compatibility score. Loop Agent matches skills to CaseState gaps by phase and case_type.
-
-### 9.4 Adding a Third-Party Source
+### 9.5 Adding a Source
 
 Add to marketplace-sources.json:
 
 ```json
-{
-  "name": "my-favorite-skills",
-  "type": "github",
-  "url": "https://github.com/someone/legal-skills",
-  "branch": "main",
-  "skill_pattern": "**/SKILL.md",
-  "auto_update": false,
-  "compatibility_min_score": 0.6
-}
+{"name": "my-source", "type": "github", "url": "https://github.com/user/repo",
+ "branch": "main", "skill_pattern": "**/SKILL.md", "compatibility_min_score": 0.5}
 ```
 
-Then `python connectors/merge_marketplace.py --source my-favorite-skills`.
+Then `python connectors/merge_marketplace.py --source my-source`.
+
+### 9.6 Integration with Loop Agent
+
+Loop Agent discovers skills via marketplace-registry.json. Each entry has name, category, R_legal score, quality. Matches skills to CaseState gaps by phase -> category.
 
