@@ -116,3 +116,32 @@ unified-legal-ai-cn/
 ## 许可证
 
 MIT License. See `LICENSE` for details.
+
+
+## Optional: juris-calculus Symbolic Reasoning Engine
+
+ULA supports [juris-calculus](https://github.com/laubeing-droid/juris-calculus) as an optional symbolic reasoning backend. When configured, 5 Agents automatically offload legal reasoning to the Horn-clause fixpoint evaluator instead of prompt-only inference.
+
+### Setup
+
+`ash
+git clone https://github.com/laubeing-droid/juris-calculus.git D:/Codex/juris-calculus
+cd D:/Codex/juris-calculus
+pip install -r requirements.txt
+`
+
+Copy .claude/settings.local.json.example to .claude/settings.local.json. The MCP server starts automatically when Codex loads the project.
+
+### What changes with jc
+
+| Agent | Without jc | With jc |
+|-------|-----------|---------|
+| Researcher | Prompt-based legal search | get_citation + lueprint_query + legal://cn-rules |
+| Strategist | Manual strategy drafting | stratified_evaluate + 	rirail_collide + dversarial_audit |
+| Writer | Manual memo writing | generate_memo + claims_detail |
+| DocAnalyzer | Prompt evidence review | Kernel-delegated evidence assessment |
+| IssueIdentifier | Prompt argument construction | Kernel-delegated argument chains |
+
+### Fallback
+
+If juris-calculus is unreachable, all Agents fall back to prompt-only reasoning. No functionality is lost — jc is a quality enhancer, not a hard dependency.
