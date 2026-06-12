@@ -119,3 +119,56 @@ unified-legal-ai-cn/
   lib/loop_controller.py             # NEW
   lawyer-profile.json.example        # NEW
 ```
+
+
+## 9. Skill Marketplace Implementation
+
+The marketplace engine lives in the dynamic-update system:
+
+```
+liuweibin-legal-skills_dynamic-update/
+  liuweibin-legal-skills/
+    connectors/
+      marketplace-sources.json     # marketplace source definitions
+      merge_marketplace.py         # sync/merge engine (Python)
+    skills/
+      community/                   # installed 3rd-party skills
+        marketplace.json           # auto-generated manifest
+```
+
+### 9.1 marketplace-sources.json
+
+Defines which GitHub repos to pull from. Any repo with SKILL.md files can be a source.
+
+### 9.2 merge_marketplace.py
+
+```bash
+python connectors/merge_marketplace.py           # sync all
+python connectors/merge_marketplace.py --dry-run  # preview
+python connectors/merge_marketplace.py --list     # show installed
+```
+
+Pipeline: clone/pull repo -> find SKILL.md -> compute compatibility score -> filter by min_score -> copy to skills/community/ -> update marketplace.json manifest.
+
+### 9.3 Integration with Loop Agent
+
+Loop Agent reads `skills/community/marketplace.json` at startup to discover installed skills. Each skill entry has: name, version, source, compatibility score. Loop Agent matches skills to CaseState gaps by phase and case_type.
+
+### 9.4 Adding a Third-Party Source
+
+Add to marketplace-sources.json:
+
+```json
+{
+  "name": "my-favorite-skills",
+  "type": "github",
+  "url": "https://github.com/someone/legal-skills",
+  "branch": "main",
+  "skill_pattern": "**/SKILL.md",
+  "auto_update": false,
+  "compatibility_min_score": 0.6
+}
+```
+
+Then `python connectors/merge_marketplace.py --source my-favorite-skills`.
+
