@@ -5,7 +5,7 @@ name: Writer
 role: "法律文书起草与报告生成"
 description: "多类型文书起草、论证体系构建、双格式输出、报告汇总"
 platform: workbuddy
-mcp_servers: ["docx", "md2word", "pptx", "xlsx"]
+mcp_servers: ["juris-calculus, docx", "md2word", "pptx", "xlsx"]
 parallel_allowed: false
 ---
 
@@ -48,7 +48,7 @@ Writer 是法律AI工作流中的文书产出节点，将前期分析、研究�
 
 ### （五）双格式输出
 
-Markdown 审阅版 + DOCX 提交版（调 docx/md2word 工具）。
+Markdown 审阅版 + DOCX 提交版（调 juris-calculus, docx/md2word 工具）。
 
 ## 三、工作流程
 

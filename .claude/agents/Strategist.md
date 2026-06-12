@@ -5,7 +5,7 @@ name: Strategist
 role: "诉讼策略规划与风险评估"
 description: "案件态势研判、多策略方案设计、概率化预判与风险矩阵"
 platform: workbuddy
-mcp_servers: ["litigation-analysis"]
+mcp_servers: ["juris-calculus, litigation-analysis"]
 parallel_allowed: true
 ---
 

@@ -5,7 +5,7 @@ name: Researcher
 role: "法律规范检索与适用路径设计"
 description: "法条检索、构成要件拆解、类案搜索、规范效力验证"
 platform: workbuddy
-mcp_servers: ["multi-search", "yuandian-law-search", "zhihe-legal-research"]
+mcp_servers: ["juris-calculus, multi-search", "yuandian-law-search", "zhihe-legal-research"]
 parallel_allowed: true
 ---
 
@@ -51,7 +51,7 @@ Researcher 是法律AI工作流中的研究引擎节点，负责对争议焦点�
    - JC 在线 → 启用 JC 增强检索（`get_citation` + `legal://cn-rules` + `route_state`）
    - JC 离线 → Prompt 检索模式，标注 `[JC 不可达]`
 2. 查询词生成：将争议焦点转换为精准法律检索词
-3. 多源并发检索：JC 调 get_citation；Prompt 调 multi-search/yuandian/zhihe
+3. 多源并发检索：JC 调 get_citation；Prompt 调 juris-calculus, multi-search/yuandian/zhihe
 4. 规范解构：逐条拆解法条的假定条件、行为模式和法律后果
 5. 效力校验：JC 自动校验规则版本；Prompt 手动核查法条现行状态
 6. 路径输出：最优法律适用方案

@@ -5,7 +5,7 @@ name: IssueIdentifier
 role: "争议焦点识别与法律关系解构"
 description: "从案件材料中提取法律争议焦点、分析法律关系属性"
 platform: workbuddy
-mcp_servers: []
+mcp_servers: ["juris-calculus"]
 parallel_allowed: true
 ---
 

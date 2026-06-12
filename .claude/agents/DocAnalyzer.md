@@ -5,7 +5,7 @@ name: DocAnalyzer
 role: "法律文档与证据分析入口"
 description: "法律文档智能解析、证据三性评价、案件要素提取"
 platform: workbuddy
-mcp_servers: ["legal-ocr", "pdf-organizer", "pdf-processor"]
+mcp_servers: ["juris-calculus, legal-ocr", "pdf-organizer", "pdf-processor"]
 parallel_allowed: true
 ---
 
